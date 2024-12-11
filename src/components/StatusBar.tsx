@@ -1,5 +1,5 @@
 import { useQuiz } from "../contexts/QuizContext";
-import BackButton from "./BackButton";
+import BackButton from "./ui/BackButton";
 
 function StatusBar() {
   const { category, difficulty } = useQuiz();
@@ -21,10 +21,10 @@ function StatusBar() {
     <div className="mb-8 flex items-center justify-between">
       <BackButton />
       <div className="flex items-center gap-2 text-2xl font-medium">
-        <p className="dark:bg-dark rounded-full bg-gray-200 px-5 py-3">
+        <p className="rounded-full bg-gray-200 px-5 py-3 dark:bg-dark">
           {categoryMap[Number(category)]}
         </p>
-        <p className="dark:bg-dark rounded-full bg-gray-200 px-5 py-3 capitalize">
+        <p className="rounded-full bg-gray-200 px-5 py-3 capitalize dark:bg-dark">
           {difficulty}
         </p>
       </div>

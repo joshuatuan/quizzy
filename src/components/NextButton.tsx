@@ -1,5 +1,5 @@
 import { useQuiz } from "../contexts/QuizContext";
-import Button from "./Button";
+import Button from "./ui/Button";
 
 function NextButton() {
   const { dispatch, userAnswer, index, numQuestions } = useQuiz();
@@ -10,7 +10,7 @@ function NextButton() {
       <Button
         onClick={() => dispatch({ type: "nextQuestion" })}
         disabled={userAnswer === null}
-        className="dark:disabled:hover:border-dark dark:disabled:hover:bg-dark disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:bg-gray-200"
+        className="disabled:cursor-not-allowed disabled:hover:border-gray-200 disabled:hover:bg-gray-200 dark:disabled:hover:border-dark dark:disabled:hover:bg-dark"
       >
         Next
       </Button>

@@ -1,7 +1,7 @@
 import { useQuiz } from "../contexts/QuizContext";
 import { type ChangeEvent, useState } from "react";
-import DropDown from "./DropDown";
-import Button from "./Button";
+import DropDown from "./ui/DropDown";
+import Button from "./ui/Button";
 
 function StartScreen() {
   const { dispatch, highScore } = useQuiz();
